@@ -27,6 +27,8 @@ def cria_token():
             print(chave)
         else:
             print('Token válido')
+        print('executando')
+        time.sleep(5)
         time.sleep(3600)
 
 
