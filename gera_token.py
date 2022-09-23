@@ -24,7 +24,7 @@ def cria_token():
             token = Token(token=chave)
             db.session.add(token)
             db.session.commit()
-            print(chave)
+            print(f'Novo token: {chave}')
         else:
             print('Token válido')
         print('executando')
