@@ -1,2 +1,2 @@
 python estrutura_banco
-web: gunicorn app:main
+web: gunicorn main:app
