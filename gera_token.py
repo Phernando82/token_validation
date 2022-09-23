@@ -28,7 +28,6 @@ def cria_token():
         else:
             print('Token válido')
         print('executando')
-        time.sleep(5)
         time.sleep(3600)
 
 
