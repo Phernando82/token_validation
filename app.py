@@ -1,7 +1,6 @@
 from flask import Flask, jsonify, request, make_response
 from estrutura_banco import Token, app, db
 import json
-import jwt
 from datetime import datetime, timedelta
 from functools import wraps
 # Rota padrão - GET http://localhost:5000
