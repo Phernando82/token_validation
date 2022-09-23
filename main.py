@@ -1,5 +1,7 @@
 import sys
 import subprocess
+from app import *
+from gera_token import *
 
 def iniciar_programa():
     arquivos = ['gera_token.py', 'app.py']
