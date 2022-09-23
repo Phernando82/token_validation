@@ -14,6 +14,7 @@ def obter_tokens():
         token_atual = {}
         token_atual['id_token'] = token.id_token
         token_atual['token'] = token.token
+        token_atual['data'] = token.data
         lista_tokens.append(token_atual)
 
     return jsonify({'token': lista_tokens})
@@ -27,6 +28,7 @@ def obter_token_por_id(id_token):
     token_atual = {}
     token_atual['id_token'] = token.id_token
     token_atual['token'] = token.token
+    token_atual['data'] = token.data
 
     return jsonify({'token': token_atual})
 
