@@ -29,6 +29,7 @@ def cria_token():
             print('Token válido')
         print('executando')
         time.sleep(3600)
+        print('Executando novamente')
 
 
 if __name__== '__main__':
