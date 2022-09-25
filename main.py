@@ -1,7 +1,7 @@
 import sys
 import subprocess
-# from app import *
-# from gera_token import *
+from app import *
+from gera_token import *
 
 
 def iniciar_programa():
