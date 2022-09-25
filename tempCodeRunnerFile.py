@@ -1,2 +1,2 @@
-
-    token = db.Column(db.String)
+    # for processo in processos:
+    #     processo.wait()

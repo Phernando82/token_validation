@@ -15,8 +15,8 @@ def iniciar_programa():
     # neste ponto todos os scripts estão rodando em background ao mesmo tempo. 
     # Para esperar todos eles terminarem:
 
-    # for processo in processos:
-    #     processo.wait()
+    for processo in processos:
+        processo.wait()
 
 
 if __name__ == '__main__':
