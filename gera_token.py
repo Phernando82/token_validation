@@ -19,7 +19,7 @@ def cria_token():
             chave = secrets.token_hex(16)
             db.drop_all()
             db.create_all()
-            token = Token(token=chave)
+            token = Token(token=chave, data=data_atual)
             db.session.add(token)
             db.session.commit()
             print(f'Novo token: {chave}')

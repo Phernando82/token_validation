@@ -1,7 +1,6 @@
 from flask import Flask, jsonify, request, make_response
 from estrutura_banco import Token, app, db
 import json
-from datetime import datetime, timedelta
 from functools import wraps
 # Rota padrão - GET http://localhost:5000
 
@@ -24,7 +23,7 @@ def obter_tokens():
 def obter_token_por_id(id_token):
     token = Token.query.filter_by(id_token=id_token).first()
     if not token:
-        return jsonify(f'token não encontrado!')
+        return jsonify('token não encontrado!')
     token_atual = {}
     token_atual['id_token'] = token.id_token
     token_atual['token'] = token.token
@@ -55,8 +54,7 @@ def alterar_token(token, id_token):
     try:
         token.token = token_a_alterar['token']
     except:
-        pass
-   
+        return jsonify({'Mensagem': 'Não foi possível alterar'})
     db.session.commit()
     return jsonify({'mensagem': 'Token alterado com sucesso!'})
 
@@ -72,5 +70,5 @@ def excluir_token(token, id_token):
     return jsonify({'mensagem': 'Token excluído com sucesso!'})
 
 
-if __name__== '__main__':
+if __name__ == '__main__':
     app.run(port=5000, host='localhost', debug=True)
