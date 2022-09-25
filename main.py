@@ -1,7 +1,8 @@
 import sys
 import subprocess
-from app import *
-from gera_token import *
+# from app import *
+# from gera_token import *
+
 
 def iniciar_programa():
     arquivos = ['gera_token.py', 'app.py']
@@ -18,5 +19,5 @@ def iniciar_programa():
         processo.wait()
 
 
-if __name__=='__main__':
+if __name__ == '__main__':
     iniciar_programa()
